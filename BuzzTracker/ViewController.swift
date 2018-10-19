@@ -8,6 +8,10 @@
 
 import UIKit
 
+var currUserEmail: String = ""
+var currUserType: UserType = UserType.user // default value, can change later
+// THESE ARE GLOBAL VARIABLES, TO TELL THE APP WHAT THE CURRENT USER IS
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
