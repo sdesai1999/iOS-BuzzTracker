@@ -12,6 +12,16 @@
 		3243F5212167A45C007BBA7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243F51F2167A45C007BBA7F /* Main.storyboard */; };
 		3243F5232167A45C007BBA7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3243F5222167A45C007BBA7F /* Assets.xcassets */; };
 		3243F5262167A45C007BBA7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243F5242167A45C007BBA7F /* LaunchScreen.storyboard */; };
+		3243F52E2167B715007BBA7F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3243F52D2167B715007BBA7F /* SignInViewController.swift */; };
+		3243F5302167B722007BBA7F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3243F52F2167B722007BBA7F /* RegisterViewController.swift */; };
+		324DE70E217A332F0050CE4B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE70D217A332F0050CE4B /* Person.swift */; };
+		324DE710217A33FB0050CE4B /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE70F217A33FB0050CE4B /* UserType.swift */; };
+		324DE712217A369D0050CE4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE711217A369D0050CE4B /* User.swift */; };
+		324DE714217A374C0050CE4B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE713217A374C0050CE4B /* Admin.swift */; };
+		324DE716217A37B00050CE4B /* LocationEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE715217A37B00050CE4B /* LocationEmployee.swift */; };
+		324DE718217A37CE0050CE4B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE717217A37CE0050CE4B /* Location.swift */; };
+		324DE71A217A39D10050CE4B /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE719217A39D10050CE4B /* Donation.swift */; };
+		324DE71C217A39F20050CE4B /* DonationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE71B217A39F20050CE4B /* DonationCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,16 @@
 		3243F5222167A45C007BBA7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3243F5252167A45C007BBA7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3243F5272167A45C007BBA7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3243F52D2167B715007BBA7F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3243F52F2167B722007BBA7F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		324DE70D217A332F0050CE4B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		324DE70F217A33FB0050CE4B /* UserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
+		324DE711217A369D0050CE4B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		324DE713217A374C0050CE4B /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		324DE715217A37B00050CE4B /* LocationEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEmployee.swift; sourceTree = "<group>"; };
+		324DE717217A37CE0050CE4B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		324DE719217A39D10050CE4B /* Donation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
+		324DE71B217A39F20050CE4B /* DonationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +77,16 @@
 				3243F51B2167A45C007BBA7F /* AppDelegate.swift */,
 				3243F51D2167A45C007BBA7F /* ViewController.swift */,
 				3243F51F2167A45C007BBA7F /* Main.storyboard */,
+				324DE70D217A332F0050CE4B /* Person.swift */,
+				324DE711217A369D0050CE4B /* User.swift */,
+				324DE713217A374C0050CE4B /* Admin.swift */,
+				324DE715217A37B00050CE4B /* LocationEmployee.swift */,
+				324DE717217A37CE0050CE4B /* Location.swift */,
+				324DE719217A39D10050CE4B /* Donation.swift */,
+				324DE71B217A39F20050CE4B /* DonationCategory.swift */,
+				324DE70F217A33FB0050CE4B /* UserType.swift */,
+				3243F52D2167B715007BBA7F /* SignInViewController.swift */,
+				3243F52F2167B722007BBA7F /* RegisterViewController.swift */,
 				3243F5222167A45C007BBA7F /* Assets.xcassets */,
 				3243F5242167A45C007BBA7F /* LaunchScreen.storyboard */,
 				3243F5272167A45C007BBA7F /* Info.plist */,
@@ -136,8 +166,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324DE70E217A332F0050CE4B /* Person.swift in Sources */,
 				3243F51E2167A45C007BBA7F /* ViewController.swift in Sources */,
+				324DE718217A37CE0050CE4B /* Location.swift in Sources */,
+				324DE710217A33FB0050CE4B /* UserType.swift in Sources */,
 				3243F51C2167A45C007BBA7F /* AppDelegate.swift in Sources */,
+				324DE716217A37B00050CE4B /* LocationEmployee.swift in Sources */,
+				324DE71A217A39D10050CE4B /* Donation.swift in Sources */,
+				3243F52E2167B715007BBA7F /* SignInViewController.swift in Sources */,
+				3243F5302167B722007BBA7F /* RegisterViewController.swift in Sources */,
+				324DE712217A369D0050CE4B /* User.swift in Sources */,
+				324DE714217A374C0050CE4B /* Admin.swift in Sources */,
+				324DE71C217A39F20050CE4B /* DonationCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

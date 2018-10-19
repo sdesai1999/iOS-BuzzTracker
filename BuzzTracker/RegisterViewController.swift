@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RegisterViewController.swift
 //  BuzzTracker
 //
 //  Created by Saurav Desai on 10/5/18.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
-
