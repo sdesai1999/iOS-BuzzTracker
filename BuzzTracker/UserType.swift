@@ -9,8 +9,8 @@
 
 import Foundation
 
-enum UserType: String {
-    case user = "User"
-    case admin = "Admin"
-    case locationEmployee = "Location Employee"
+enum UserType: String, CaseIterable {
+    case user = "USER"
+    case admin = "ADMIN"
+    case locationEmployee = "LOCATION EMPLOYEE"
 }

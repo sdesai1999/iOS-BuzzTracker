@@ -7,5 +7,7 @@ target 'BuzzTracker' do
 
   # Pods for BuzzTracker
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end
