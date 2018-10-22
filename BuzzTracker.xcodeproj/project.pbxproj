@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321955A9217E32FC00A2E8C2 /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321955A8217E32FC00A2E8C2 /* LocationsListViewController.swift */; };
 		3243F51C2167A45C007BBA7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3243F51B2167A45C007BBA7F /* AppDelegate.swift */; };
 		3243F51E2167A45C007BBA7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3243F51D2167A45C007BBA7F /* ViewController.swift */; };
 		3243F5212167A45C007BBA7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3243F51F2167A45C007BBA7F /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		30B5CBAE1CF804E4ABDFD95A /* Pods-BuzzTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuzzTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuzzTracker/Pods-BuzzTracker.release.xcconfig"; sourceTree = "<group>"; };
+		321955A8217E32FC00A2E8C2 /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewController.swift; sourceTree = "<group>"; };
 		3243F5182167A45C007BBA7F /* BuzzTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuzzTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3243F51B2167A45C007BBA7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3243F51D2167A45C007BBA7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				3243F51B2167A45C007BBA7F /* AppDelegate.swift */,
 				3243F51D2167A45C007BBA7F /* ViewController.swift */,
 				3243F51F2167A45C007BBA7F /* Main.storyboard */,
+				321955A8217E32FC00A2E8C2 /* LocationsListViewController.swift */,
 				32D78634217D88FA00A6A60E /* AppScreenViewController.swift */,
 				324DE70D217A332F0050CE4B /* Person.swift */,
 				324DE711217A369D0050CE4B /* User.swift */,
@@ -260,6 +263,7 @@
 				3243F51C2167A45C007BBA7F /* AppDelegate.swift in Sources */,
 				324DE716217A37B00050CE4B /* LocationEmployee.swift in Sources */,
 				324DE71A217A39D10050CE4B /* Donation.swift in Sources */,
+				321955A9217E32FC00A2E8C2 /* LocationsListViewController.swift in Sources */,
 				3243F52E2167B715007BBA7F /* SignInViewController.swift in Sources */,
 				3243F5302167B722007BBA7F /* RegisterViewController.swift in Sources */,
 				324DE712217A369D0050CE4B /* User.swift in Sources */,
