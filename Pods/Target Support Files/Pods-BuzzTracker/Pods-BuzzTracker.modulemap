@@ -1,0 +1,6 @@
+framework module Pods_BuzzTracker {
+  umbrella header "Pods-BuzzTracker-umbrella.h"
+
+  export *
+  module * { export * }
+}
