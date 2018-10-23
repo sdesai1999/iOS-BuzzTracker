@@ -12,5 +12,5 @@ import Foundation
 enum UserType: String, CaseIterable {
     case user = "USER"
     case admin = "ADMIN"
-    case locationEmployee = "LOCATION EMPLOYEE"
+    case locationEmployee = "LOCATION_EMPLOYEE"
 }

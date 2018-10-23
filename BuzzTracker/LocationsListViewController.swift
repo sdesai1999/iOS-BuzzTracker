@@ -10,12 +10,30 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class LocationsListViewController: UIViewController {
-
+class LocationsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return locationList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = locationList[indexPath.row].name
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = locationsTableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectedLocation = locationList[indexPath.row]
+        self.performSegue(withIdentifier: "tappedOnCell", sender: self)
+    }
+    
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
+    @IBOutlet weak var locationsTableView: UITableView!
     
     var locationList: [Location] = []
+    var selectedLocation: Location? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +68,13 @@ class LocationsListViewController: UIViewController {
                 self.locationList.append(newLoc)
             }
             
-            for location in self.locationList {
-                print(location.address)
-            }
+            self.locationsTableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LocationDetailViewController {
+            destination.currLocation = selectedLocation
         }
     }
 }
