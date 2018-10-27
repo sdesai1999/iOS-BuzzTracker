@@ -44,5 +44,11 @@ class LocationDetailViewController: UIViewController {
         detailLabels[4].text = "Address: \(currLocation!.address)"
         detailLabels[5].text = "Phone Number: \(currLocation!.phoneNum)"
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DonationsListViewController {
+            destination.currLocation = currLocation
+        }
+    }
 
 }

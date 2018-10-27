@@ -9,11 +9,11 @@
 
 import Foundation
 
-enum DonationCategory: String {
-    case clothing = "Clothing"
-    case hat = "Hat"
-    case kitchen = "Kitchen"
-    case electronics = "Electronics"
-    case household = "Household"
-    case other = "Other"
+enum DonationCategory: String, CaseIterable {
+    case clothing = "CLOTHING"
+    case hat = "HAT"
+    case kitchen = "KITCHEN"
+    case electronics = "ELECTRONICS"
+    case household = "HOUSEHOLD"
+    case other = "OTHER"
 }

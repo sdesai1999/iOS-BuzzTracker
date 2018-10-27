@@ -22,7 +22,7 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = locationsTableView.cellForRow(at: indexPath)
+        _ = locationsTableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         selectedLocation = locationList[indexPath.row]
         self.performSegue(withIdentifier: "tappedOnCell", sender: self)
@@ -63,7 +63,8 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
                     currLocData.append(dataKey.value as! String)
                 }
                 
-                let newLoc = Location(tmpName: currLocData[3], tmpLat: currLocData[1], tmpLong: currLocData[2], tmpAddr: currLocData[0], tmpType: currLocData[5], tmpPhone: currLocData[4], tmpSite: currLocData[6])
+                let newLoc = Location(tmpName: currLocData[3], tmpLat: currLocData[1], tmpLong: currLocData[2], tmpAddr: currLocData[0],
+                                      tmpType: currLocData[5], tmpPhone: currLocData[4], tmpSite: currLocData[6])
                 
                 self.locationList.append(newLoc)
             }
