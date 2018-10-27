@@ -10,14 +10,32 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
-class DonationsListViewController: UIViewController {
-
+class DonationsListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return donationList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = donationList[indexPath.row].shortDescription
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // _ = locationsTableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        selectedDonation = donationList[indexPath.row]
+        self.performSegue(withIdentifier: "tappedOnDonationCell", sender: self)
+    }
     
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
+    @IBOutlet weak var donationTableView: UITableView!
     
     var currLocation: Location? = nil
     var donationList: [Donation] = []
+    var selectedDonation: Donation? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,11 +88,26 @@ class DonationsListViewController: UIViewController {
                 }
                 
                 let newDonation = Donation(tmpStamp: currDonationData[6] as! TimeStamp, tmpLoc: currDonationData[2] as! String, tmpShort: currDonationData[5] as! String,
-                                           tmpFull: currDonationData[1] as! String, tmpVal: currDonationData[7] as! Int, tmpCat: currDonationData[0] as! DonationCategory,
+                                           tmpFull: currDonationData[1] as! String, tmpVal: currDonationData[7] as! Double, tmpCat: currDonationData[0] as! DonationCategory,
                                            tmpNum: currDonationData[4] as! Int)
                 
                 self.donationList.append(newDonation)
             }
+            
+            self.donationTableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? LocationDetailViewController {
+            destination.currLocation = currLocation
+            return
+        }
+        
+        if let destination = segue.destination as? DonationDetailViewController {
+            destination.currLocation = currLocation
+            destination.currDonation = selectedDonation
+            return
         }
     }
 

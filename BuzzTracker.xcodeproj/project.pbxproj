@@ -25,6 +25,7 @@
 		324DE71C217A39F20050CE4B /* DonationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324DE71B217A39F20050CE4B /* DonationCategory.swift */; };
 		32511E662185020600B4F179 /* DonationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32511E652185020600B4F179 /* DonationsListViewController.swift */; };
 		32511E682185090900B4F179 /* TimeStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32511E672185090900B4F179 /* TimeStamp.swift */; };
+		32511E6A2185232400B4F179 /* DonationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32511E692185232400B4F179 /* DonationDetailViewController.swift */; };
 		32BDD37E217A71E20054152D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32BDD37D217A71E20054152D /* GoogleService-Info.plist */; };
 		32CEE0C3217E60E4005E09C5 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CEE0C2217E60E4005E09C5 /* LocationDetailViewController.swift */; };
 		32D78635217D88FA00A6A60E /* AppScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78634217D88FA00A6A60E /* AppScreenViewController.swift */; };
@@ -53,6 +54,7 @@
 		324DE71B217A39F20050CE4B /* DonationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationCategory.swift; sourceTree = "<group>"; };
 		32511E652185020600B4F179 /* DonationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsListViewController.swift; sourceTree = "<group>"; };
 		32511E672185090900B4F179 /* TimeStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStamp.swift; sourceTree = "<group>"; };
+		32511E692185232400B4F179 /* DonationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationDetailViewController.swift; sourceTree = "<group>"; };
 		32BDD37D217A71E20054152D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32CEE0C2217E60E4005E09C5 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		32D78634217D88FA00A6A60E /* AppScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenViewController.swift; sourceTree = "<group>"; };
@@ -96,10 +98,11 @@
 				3243F51B2167A45C007BBA7F /* AppDelegate.swift */,
 				3243F51D2167A45C007BBA7F /* ViewController.swift */,
 				3243F51F2167A45C007BBA7F /* Main.storyboard */,
+				32511E692185232400B4F179 /* DonationDetailViewController.swift */,
 				32511E652185020600B4F179 /* DonationsListViewController.swift */,
+				32CEE0C2217E60E4005E09C5 /* LocationDetailViewController.swift */,
 				321955A8217E32FC00A2E8C2 /* LocationsListViewController.swift */,
 				32511E672185090900B4F179 /* TimeStamp.swift */,
-				32CEE0C2217E60E4005E09C5 /* LocationDetailViewController.swift */,
 				32D78634217D88FA00A6A60E /* AppScreenViewController.swift */,
 				324DE70D217A332F0050CE4B /* Person.swift */,
 				324DE711217A369D0050CE4B /* User.swift */,
@@ -282,6 +285,7 @@
 				324DE714217A374C0050CE4B /* Admin.swift in Sources */,
 				32D78635217D88FA00A6A60E /* AppScreenViewController.swift in Sources */,
 				324DE71C217A39F20050CE4B /* DonationCategory.swift in Sources */,
+				32511E6A2185232400B4F179 /* DonationDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

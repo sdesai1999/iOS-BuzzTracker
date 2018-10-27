@@ -13,12 +13,12 @@ class Donation {
     var location: String
     var shortDescription: String
     var fullDescripton: String
-    var value: Int
+    var value: Double
     var category: DonationCategory
     var number: Int
     // add comments and photo as extra credit later ???
     
-    init(tmpStamp: TimeStamp, tmpLoc: String, tmpShort: String, tmpFull: String, tmpVal: Int, tmpCat: DonationCategory, tmpNum: Int) {
+    init(tmpStamp: TimeStamp, tmpLoc: String, tmpShort: String, tmpFull: String, tmpVal: Double, tmpCat: DonationCategory, tmpNum: Int) {
         timeStamp = tmpStamp
         location = tmpLoc
         shortDescription = tmpShort
