@@ -38,14 +38,14 @@ class DonationDetailViewController: UIViewController {
             }
         })
         
-        detailLabels[0].text = "Category: \(currDonation!.category.rawValue)"
+        detailLabels[0].text = "Category: \(currDonation!.category)"
         detailLabels[1].text = "Full Description: \(currDonation!.fullDescripton)"
         detailLabels[2].text = "Location: \(currLocation!.name)"
         detailLabels[3].text = "Number: \(currDonation!.number)"
         detailLabels[4].text = "Short Description: \(currDonation!.shortDescription)"
         detailLabels[6].text = "Value: \(currDonation!.value)"
         
-        let timeStamp: TimeStamp = currDonation!.timeStamp
+        let timeStamp: TimeStamp = currDonation!.timestamp
         
         let yearStr = String(timeStamp.year)
         let start = yearStr.index(yearStr.startIndex, offsetBy: 1)

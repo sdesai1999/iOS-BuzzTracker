@@ -23,7 +23,6 @@ class DonationsListViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // _ = locationsTableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         selectedDonation = donationList[indexPath.row]
         self.performSegue(withIdentifier: "tappedOnDonationCell", sender: self)
@@ -69,8 +68,8 @@ class DonationsListViewController: UIViewController, UITableViewDelegate, UITabl
                             timeData.append(elem.value as! Int)
                         }
                         
-                        let stamp = TimeStamp(aMonth: timeData[4], aDay: timeData[1], aYear: timeData[9], aHours: timeData[2],
-                                              aMinutes: timeData[3], aSeconds: timeData[6])
+                        let stamp = TimeStamp(aDate: timeData[0], aMonth: timeData[4], aDay: timeData[1], aYear: timeData[9], aHours: timeData[2],
+                                              aMinutes: timeData[3], aSeconds: timeData[6], aNanos: timeData[5], aTime: timeData[7], aOffset: timeData[8])
                         currDonationData.append(stamp as Any)
                         continue
                     }
@@ -81,14 +80,14 @@ class DonationsListViewController: UIViewController, UITableViewDelegate, UITabl
                 if let tempDonationType = currDonationData[0] as? String {
                     for donationType in DonationCategory.allCases {
                         if donationType.rawValue == tempDonationType {
-                            currDonationData[0] = donationType
+                            currDonationData[0] = donationType.rawValue
                             break
                         }
                     }
                 }
                 
                 let newDonation = Donation(tmpStamp: currDonationData[6] as! TimeStamp, tmpLoc: currDonationData[2] as! String, tmpShort: currDonationData[5] as! String,
-                                           tmpFull: currDonationData[1] as! String, tmpVal: currDonationData[7] as! Double, tmpCat: currDonationData[0] as! DonationCategory,
+                                           tmpFull: currDonationData[1] as! String, tmpVal: currDonationData[7] as! Double, tmpCat: currDonationData[0] as! String,
                                            tmpNum: currDonationData[4] as! Int)
                 
                 self.donationList.append(newDonation)

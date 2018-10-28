@@ -15,12 +15,17 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
     @IBOutlet var detailLabels: [UILabel]!
+    @IBOutlet weak var addDonationButton: UIButton!
     
     
     var currLocation: Location? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if currUserType != UserType.locationEmployee {
+            addDonationButton.isHidden = true
+        }
         
         emailLabel.text = Auth.auth().currentUser!.email
         
@@ -47,6 +52,10 @@ class LocationDetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? DonationsListViewController {
+            destination.currLocation = currLocation
+        }
+        
+        if let destination = segue.destination as? AddDonationViewController {
             destination.currLocation = currLocation
         }
     }

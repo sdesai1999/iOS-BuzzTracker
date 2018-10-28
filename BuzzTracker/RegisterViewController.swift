@@ -51,7 +51,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 let textFieldY = activeTextField.frame.origin.y
                 if currKeyboardHeight < textFieldY {
                     self.view.frame.origin.y -= currKeyboardHeight
-                    print(currKeyboardHeight)
                 }
             }
         }
@@ -60,7 +59,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         if view.frame.origin.y != 0 {
             view.frame.origin.y += currKeyboardHeight
-            print(currKeyboardHeight)
         }
     }
     
@@ -148,7 +146,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 
                 let reference: DatabaseReference = Database.database().reference()
                 let signedUpUser = Auth.auth().currentUser
-                print(signedUpUser!.uid)
                 reference.child("Users").child(signedUpUser!.uid).child("email").setValue(emailText)
                 reference.child("Users").child(signedUpUser!.uid).child("name").setValue(nameText)
                 reference.child("Users").child(signedUpUser!.uid).child("userType").setValue(currUserType.rawValue)

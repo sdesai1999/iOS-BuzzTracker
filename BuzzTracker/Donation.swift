@@ -9,17 +9,17 @@
 import Foundation
 
 class Donation {
-    var timeStamp: TimeStamp
+    var timestamp: TimeStamp
     var location: String
     var shortDescription: String
     var fullDescripton: String
     var value: Double
-    var category: DonationCategory
+    var category: String
     var number: Int
     // add comments and photo as extra credit later ???
     
-    init(tmpStamp: TimeStamp, tmpLoc: String, tmpShort: String, tmpFull: String, tmpVal: Double, tmpCat: DonationCategory, tmpNum: Int) {
-        timeStamp = tmpStamp
+    init(tmpStamp: TimeStamp, tmpLoc: String, tmpShort: String, tmpFull: String, tmpVal: Double, tmpCat: String, tmpNum: Int) {
+        timestamp = tmpStamp
         location = tmpLoc
         shortDescription = tmpShort
         fullDescripton = tmpFull

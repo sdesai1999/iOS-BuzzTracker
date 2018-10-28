@@ -22,7 +22,6 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // _ = locationsTableView.cellForRow(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         selectedLocation = locationList[indexPath.row]
         self.performSegue(withIdentifier: "tappedOnCell", sender: self)
