@@ -52,7 +52,20 @@ class DonationDetailViewController: UIViewController {
         let end = yearStr.index(yearStr.startIndex, offsetBy: 2)
         let yearSubstr = yearStr[start...end]
         
-        let timeMessage: String = "Time Stamp: \(timeStamp.month)-\(timeStamp.day)-\(yearSubstr) \(timeStamp.hours):\(timeStamp.minutes):\(timeStamp.seconds)"
+        var hourString: String = "\(timeStamp.hours)"
+        var minuteString: String = "\(timeStamp.minutes)"
+        var secondString: String = "\(timeStamp.seconds)"
+        if timeStamp.hours < 10 {
+            hourString = "0\(hourString)"
+        }
+        if timeStamp.minutes < 10 {
+            minuteString = "0\(minuteString)"
+        }
+        if timeStamp.seconds < 10 {
+            secondString = "0\(secondString)"
+        }
+        
+        let timeMessage: String = "Time Stamp: \(timeStamp.month)-\(timeStamp.date)-\(yearSubstr) \(hourString):\(minuteString):\(secondString)"
         detailLabels[5].text = timeMessage
     }
     

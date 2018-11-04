@@ -141,11 +141,10 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "e"
-        let weekday1: Int = Int(dateFormatter.string(from: date))!
-        let weekday = weekday1 - 1
+        let weekday: Int = Int(dateFormatter.string(from: date))!
         dateFormatter.dateFormat = "d"
         let monthday: Int = Int(dateFormatter.string(from: date))!
-        dateFormatter.dateFormat = "m"
+        dateFormatter.dateFormat = "MM"
         let month: Int = Int(dateFormatter.string(from: date))!
         dateFormatter.dateFormat = "yy"
         let year1: Int = Int(dateFormatter.string(from: date))!
@@ -153,16 +152,20 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
         let timeInMillis = Int(date.timeIntervalSince1970 * 10000)
         let timezoneOffset: Int = 240
         let nanos: Int = 731000000
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minute = calendar.component(.minute, from: date)
-        let second = calendar.component(.second, from: date)
+        dateFormatter.dateFormat = "HH"
+        let hour = Int(dateFormatter.string(from: date))!
+        dateFormatter.dateFormat = "mm"
+        let minute = Int(dateFormatter.string(from: date))!
+        dateFormatter.dateFormat = "ss"
+        let second = Int(dateFormatter.string(from: date))!
         
         let selectedCategory = categories[categoryPicker.selectedRow(inComponent: 0)]
         
         let timestamp: TimeStamp = TimeStamp(aDate: monthday, aMonth: month, aDay: weekday, aYear: year, aHours: hour, aMinutes: minute,
                                              aSeconds: second, aNanos: nanos, aTime: timeInMillis, aOffset: timezoneOffset)
-        let donation: Donation = Donation(tmpStamp: timestamp, tmpLoc: currLocation!.name, tmpShort: shortDescriptionText, tmpFull: fullDescriptionText, tmpVal: validValue!, tmpCat: selectedCategory, tmpNum: validNumber!)
+        
+        let donation: Donation = Donation(tmpStamp: timestamp, tmpLoc: currLocation!.name, tmpShort: shortDescriptionText,
+                                          tmpFull: fullDescriptionText, tmpVal: validValue!, tmpCat: selectedCategory, tmpNum: validNumber!)
         
         var ref = Database.database().reference().child("donations").child(donation.location).childByAutoId()
         ref.child("category").setValue(selectedCategory)
@@ -186,7 +189,6 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
         ref.child("year").setValue(timestamp.year)
         
         self.performSegue(withIdentifier: "addDonationToLocationsList", sender: self)
-        
     }
     
     @objc func textFieldWasTappedOn(textField: UITextField) {
@@ -200,7 +202,6 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 let textFieldY = activeTextField.frame.origin.y
                 if currKeyboardHeight < textFieldY {
                     self.view.frame.origin.y -= currKeyboardHeight
-                    print("IGOTHERE")
                 }
             }
         }
