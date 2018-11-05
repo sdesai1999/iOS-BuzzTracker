@@ -17,7 +17,11 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        let cellLabel = "\(donationList[indexPath.row].shortDescription): \(donationList[indexPath.row].location)"
+        var cellLabel = ""
+        switch numFound {
+            case 0: cellLabel = "\(donationList[indexPath.row].shortDescription)"
+            default: cellLabel = "\(donationList[indexPath.row].shortDescription): \(donationList[indexPath.row].location)"
+        }
         cell.textLabel?.text = cellLabel
         return cell
     }
@@ -33,9 +37,16 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     var searchedCategory: String = ""
     var searchedName: String = ""
     var originVC: String = ""
+    var numFound: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        donationList.append(Donation(tmpStamp: TimeStamp(aDate: 0, aMonth: 0, aDay: 0, aYear: 0, aHours: 0, aMinutes: 0, aSeconds: 0, aNanos: 0, aTime: 0, aOffset: 0),
+                                     tmpLoc: "na", tmpShort: "No donation matches the search", tmpFull: "na", tmpVal: 0, tmpCat: "na", tmpNum: 0))
+        donationTableView.beginUpdates()
+        donationTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        donationTableView.endUpdates()
         
         emailLabel.text = Auth.auth().currentUser!.email
         
@@ -66,12 +77,6 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
                 let snap = child as! DataSnapshot
                 self.singleLocationSearch(locString: snap.key, single: false)
             }
-            
-//            if self.donationList.count == 0 {
-//                let alert = UIAlertController(title: "No Donation Found", message: "There are no donations that match the search", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//                self.present(alert, animated: true, completion: nil)
-//            }
         }
         
     }
@@ -97,6 +102,12 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
                 }
                 
                 if doSearch {
+                    self.numFound += 1
+                    if self.numFound == 1 {
+                        self.donationList.remove(at: 0)
+                        self.donationTableView.reloadData()
+                    }
+                    
                     for newChild in snap.children {
                         let dataKey = newChild as! DataSnapshot
                         if dataKey.key == "timestamp" {
@@ -130,12 +141,6 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
                     
                     self.donationList.append(newDonation)
                 }
-                
-//                if single && self.donationList.count == 0 {
-//                    let alert = UIAlertController(title: "No Donation Found", message: "There are no donations that match the search", preferredStyle: .alert)
-//                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//                    self.present(alert, animated: true, completion: nil)
-//                }
             }
             
             self.donationTableView.reloadData()
