@@ -29,6 +29,7 @@
 		32511E6C21857D2A00B4F179 /* AddDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32511E6B21857D2A00B4F179 /* AddDonationViewController.swift */; };
 		327EBF20218EB61E00B45C9A /* SearchByNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EBF1F218EB61E00B45C9A /* SearchByNameViewController.swift */; };
 		327EBF22218EC4C400B45C9A /* SearchByCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EBF21218EC4C400B45C9A /* SearchByCategoryViewController.swift */; };
+		327EBF24218FB4BD00B45C9A /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EBF23218FB4BD00B45C9A /* SearchResultsViewController.swift */; };
 		32BDD37E217A71E20054152D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32BDD37D217A71E20054152D /* GoogleService-Info.plist */; };
 		32CEE0C3217E60E4005E09C5 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CEE0C2217E60E4005E09C5 /* LocationDetailViewController.swift */; };
 		32D78635217D88FA00A6A60E /* AppScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78634217D88FA00A6A60E /* AppScreenViewController.swift */; };
@@ -61,6 +62,7 @@
 		32511E6B21857D2A00B4F179 /* AddDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDonationViewController.swift; sourceTree = "<group>"; };
 		327EBF1F218EB61E00B45C9A /* SearchByNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByNameViewController.swift; sourceTree = "<group>"; };
 		327EBF21218EC4C400B45C9A /* SearchByCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByCategoryViewController.swift; sourceTree = "<group>"; };
+		327EBF23218FB4BD00B45C9A /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		32BDD37D217A71E20054152D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32CEE0C2217E60E4005E09C5 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		32D78634217D88FA00A6A60E /* AppScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				3243F51B2167A45C007BBA7F /* AppDelegate.swift */,
 				3243F51D2167A45C007BBA7F /* ViewController.swift */,
 				3243F51F2167A45C007BBA7F /* Main.storyboard */,
+				327EBF23218FB4BD00B45C9A /* SearchResultsViewController.swift */,
 				327EBF21218EC4C400B45C9A /* SearchByCategoryViewController.swift */,
 				327EBF1F218EB61E00B45C9A /* SearchByNameViewController.swift */,
 				32511E6B21857D2A00B4F179 /* AddDonationViewController.swift */,
@@ -280,6 +283,7 @@
 				324DE70E217A332F0050CE4B /* Person.swift in Sources */,
 				327EBF22218EC4C400B45C9A /* SearchByCategoryViewController.swift in Sources */,
 				3243F51E2167A45C007BBA7F /* ViewController.swift in Sources */,
+				327EBF24218FB4BD00B45C9A /* SearchResultsViewController.swift in Sources */,
 				32511E662185020600B4F179 /* DonationsListViewController.swift in Sources */,
 				324DE718217A37CE0050CE4B /* Location.swift in Sources */,
 				327EBF20218EB61E00B45C9A /* SearchByNameViewController.swift in Sources */,

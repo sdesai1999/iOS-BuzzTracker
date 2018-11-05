@@ -58,5 +58,21 @@ class SearchByCategoryViewController: UIViewController, UITextFieldDelegate, UIP
             self.locationPicker.reloadAllComponents()
         }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SearchResultsViewController {
+            destination.byCategory = true
+            destination.locationToSearch = locationList[locationPicker.selectedRow(inComponent: 0)]
+            let selec = categoryControl.selectedSegmentIndex
+            switch selec {
+                case 0: destination.searchedCategory = "CLOTHING"
+                case 1: destination.searchedCategory = "HAT"
+                case 2: destination.searchedCategory = "KITCHEN"
+                case 3: destination.searchedCategory = "ELECTRONICS"
+                case 4: destination.searchedCategory = "HOUSEHOLD"
+                default: destination.searchedCategory = "OTHER"
+            }
+            destination.originVC = "cat"
+        }
+    }
 }

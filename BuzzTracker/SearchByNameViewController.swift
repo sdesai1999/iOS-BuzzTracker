@@ -95,4 +95,24 @@ class SearchByNameViewController: UIViewController, UIPickerViewDelegate, UIPick
         return false
     }
 
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        if searchTextField.text!.count == 0 {
+            let message = "Search text is empty"
+            let alert = UIAlertController(title: "Invalid Input", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        self.performSegue(withIdentifier: "byNameToResults", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SearchResultsViewController {
+            destination.byCategory = false
+            destination.locationToSearch = locationList[locationPicker.selectedRow(inComponent: 0)]
+            destination.searchedName = searchTextField.text!
+            destination.originVC = "name"
+        }
+    }
 }
