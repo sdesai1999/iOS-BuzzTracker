@@ -76,5 +76,9 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
         if let destination = segue.destination as? LocationDetailViewController {
             destination.currLocation = selectedLocation
         }
+        
+        if let destination = segue.destination as? MapViewController {
+            destination.locationList = self.locationList
+        }
     }
 }

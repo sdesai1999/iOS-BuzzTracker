@@ -31,6 +31,7 @@
 		327EBF22218EC4C400B45C9A /* SearchByCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EBF21218EC4C400B45C9A /* SearchByCategoryViewController.swift */; };
 		327EBF24218FB4BD00B45C9A /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EBF23218FB4BD00B45C9A /* SearchResultsViewController.swift */; };
 		32BDD37E217A71E20054152D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32BDD37D217A71E20054152D /* GoogleService-Info.plist */; };
+		32C2934521968A3A000D7AE8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C2934421968A3A000D7AE8 /* MapViewController.swift */; };
 		32CEE0C3217E60E4005E09C5 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CEE0C2217E60E4005E09C5 /* LocationDetailViewController.swift */; };
 		32D78635217D88FA00A6A60E /* AppScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D78634217D88FA00A6A60E /* AppScreenViewController.swift */; };
 		ECFE2A0B26CCC8D85657660C /* Pods_BuzzTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE471175CD2A1A136C8C4BA5 /* Pods_BuzzTracker.framework */; };
@@ -64,6 +65,7 @@
 		327EBF21218EC4C400B45C9A /* SearchByCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByCategoryViewController.swift; sourceTree = "<group>"; };
 		327EBF23218FB4BD00B45C9A /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		32BDD37D217A71E20054152D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32C2934421968A3A000D7AE8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		32CEE0C2217E60E4005E09C5 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		32D78634217D88FA00A6A60E /* AppScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenViewController.swift; sourceTree = "<group>"; };
 		5AD2F14988ED63E0D421A2FA /* Pods-BuzzTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuzzTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuzzTracker/Pods-BuzzTracker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				3243F51B2167A45C007BBA7F /* AppDelegate.swift */,
 				3243F51D2167A45C007BBA7F /* ViewController.swift */,
 				3243F51F2167A45C007BBA7F /* Main.storyboard */,
+				32C2934421968A3A000D7AE8 /* MapViewController.swift */,
 				327EBF23218FB4BD00B45C9A /* SearchResultsViewController.swift */,
 				327EBF21218EC4C400B45C9A /* SearchByCategoryViewController.swift */,
 				327EBF1F218EB61E00B45C9A /* SearchByNameViewController.swift */,
@@ -289,6 +292,7 @@
 				327EBF20218EB61E00B45C9A /* SearchByNameViewController.swift in Sources */,
 				324DE710217A33FB0050CE4B /* UserType.swift in Sources */,
 				32CEE0C3217E60E4005E09C5 /* LocationDetailViewController.swift in Sources */,
+				32C2934521968A3A000D7AE8 /* MapViewController.swift in Sources */,
 				3243F51C2167A45C007BBA7F /* AppDelegate.swift in Sources */,
 				324DE716217A37B00050CE4B /* LocationEmployee.swift in Sources */,
 				32511E682185090900B4F179 /* TimeStamp.swift in Sources */,
