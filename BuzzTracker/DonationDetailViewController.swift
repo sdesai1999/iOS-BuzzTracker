@@ -41,7 +41,7 @@ class DonationDetailViewController: UIViewController {
         detailLabels[0].text = "Category: \(currDonation!.category)"
         detailLabels[1].text = "Full Description: \(currDonation!.fullDescripton)"
         detailLabels[2].text = "Location: \(currLocation!.name)"
-        detailLabels[3].text = "Number: \(currDonation!.number)"
+        detailLabels[3].text = "Quantity: \(currDonation!.number)"
         detailLabels[4].text = "Short Description: \(currDonation!.shortDescription)"
         detailLabels[6].text = "Value: \(currDonation!.value)"
         

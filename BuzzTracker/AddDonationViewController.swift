@@ -171,8 +171,7 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
         ref.child("category").setValue(selectedCategory)
         ref.child("fullDescription").setValue(fullDescriptionText)
         ref.child("location").setValue(donation.location)
-        ref.child("locationName").setValue(currLocation!.name) // same as above
-        ref.child("number").setValue(validNumber!)
+        ref.child("quantity").setValue(validNumber!)
         ref.child("shortDescription").setValue(shortDescriptionText)
         ref.child("value").setValue(validValue!)
 

@@ -10,17 +10,20 @@ import UIKit
 import MapKit
 import FirebaseAuth
 import FirebaseDatabase
+import CoreLocation
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
     var locationList: [Location] = []
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         emailLabel.text = Auth.auth().currentUser!.email
         
         let ref1 = Database.database().reference()
@@ -64,6 +67,25 @@ class MapViewController: UIViewController {
         let span = MKCoordinateSpan(latitudeDelta: 0.27, longitudeDelta: 0.27)
         let region = MKCoordinateRegion(center: centerLocation, span: span)
         mapView.setRegion(region, animated: true)
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            checkLocationAuthorization()
+            print("got here")
+        }
+    }
+    
+    func checkLocationAuthorization() {
+        switch CLLocationManager.authorizationStatus() {
+            case .authorizedWhenInUse:
+                mapView.showsUserLocation = true
+                print(mapView.isUserLocationVisible)
+            case .notDetermined: locationManager.requestWhenInUseAuthorization()
+            case .restricted: break
+            case .denied: break
+            case .authorizedAlways: break
+        }
     }
 
 }

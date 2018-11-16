@@ -86,9 +86,9 @@ class DonationsListViewController: UIViewController, UITableViewDelegate, UITabl
                     }
                 }
                 
-                let newDonation = Donation(tmpStamp: currDonationData[6] as! TimeStamp, tmpLoc: currDonationData[2] as! String, tmpShort: currDonationData[5] as! String,
-                                           tmpFull: currDonationData[1] as! String, tmpVal: currDonationData[7] as! Double, tmpCat: currDonationData[0] as! String,
-                                           tmpNum: currDonationData[4] as! Int)
+                let newDonation = Donation(tmpStamp: currDonationData[5] as! TimeStamp, tmpLoc: currDonationData[2] as! String, tmpShort: currDonationData[4] as! String,
+                                           tmpFull: currDonationData[1] as! String, tmpVal: currDonationData[6] as! Double, tmpCat: currDonationData[0] as! String,
+                                           tmpNum: currDonationData[3] as! Int)
                 
                 self.donationList.append(newDonation)
             }

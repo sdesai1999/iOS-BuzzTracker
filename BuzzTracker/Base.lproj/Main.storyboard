@@ -617,6 +617,9 @@
                             </navigationBar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PIh-iE-zAH">
                                 <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oi8-YH-lkx" id="0rF-2Z-fMc"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1522,11 +1525,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKM-E0-GlP">
-                                <rect key="frame" x="16" y="406" width="62" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKM-E0-GlP">
+                                <rect key="frame" x="16" y="406" width="65" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5nj-aV-2bF"/>
-                                    <constraint firstAttribute="width" constant="62" id="XR5-0m-BmJ"/>
+                                    <constraint firstAttribute="width" constant="65" id="ou7-ah-upm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1946,11 +1949,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ejb-5C-qGr"/>
-        <segue reference="LQ0-IO-5jm"/>
+        <segue reference="H9c-Nq-WW8"/>
         <segue reference="e1i-yB-W5s"/>
         <segue reference="4Lq-ks-vjW"/>
         <segue reference="caY-aj-krG"/>
-        <segue reference="cxk-eD-seq"/>
+        <segue reference="9NT-cX-gnC"/>
         <segue reference="Cjp-FZ-fLb"/>
         <segue reference="opd-tO-Nnm"/>
     </inferredMetricsTieBreakers>
