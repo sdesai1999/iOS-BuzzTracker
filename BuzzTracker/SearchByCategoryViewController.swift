@@ -23,15 +23,31 @@ class SearchByCategoryViewController: UIViewController, UITextFieldDelegate, UIP
         return locationList[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = view as? UILabel
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            let font = UIFont(name: "Avenir", size: 16)
+            pickerLabel?.font = font
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = locationList[row]
+        pickerLabel?.textColor = UIColor.black
+        return pickerLabel!
+    }
+    
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
     @IBOutlet weak var locationPicker: UIPickerView!
     @IBOutlet weak var categoryControl: UISegmentedControl!
+    @IBOutlet weak var searchButton: UIButton!
     
     var locationList: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.barButtonFormat()
+        searchButton.layer.cornerRadius = 9
         
         emailLabel.text = Auth.auth().currentUser!.email
         

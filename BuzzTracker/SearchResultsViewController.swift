@@ -26,6 +26,11 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(red: 1.00032, green: 0.998127, blue: 0.923862, alpha: 1)
+        cell.textLabel?.font = UIFont(name: "Avenir", size: 16)
+    }
+    
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
     @IBOutlet weak var donationTableView: UITableView!
@@ -41,6 +46,8 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        donationTableView.separatorStyle = .none
+        self.barButtonFormat()
         
         donationList.append(Donation(tmpStamp: TimeStamp(aDate: 0, aMonth: 0, aDay: 0, aYear: 0, aHours: 0, aMinutes: 0, aSeconds: 0, aNanos: 0, aTime: 0, aOffset: 0),
                                      tmpLoc: "na", tmpShort: "No donation matches the search", tmpFull: "na", tmpVal: 0, tmpCat: "na", tmpNum: 0))

@@ -42,6 +42,7 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.barButtonFormat()
+        self.locationsTableView.separatorStyle = .none
         
         emailLabel.text = Auth.auth().currentUser!.email
 

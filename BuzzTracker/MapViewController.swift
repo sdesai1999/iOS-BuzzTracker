@@ -63,7 +63,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
         let avgLong: Double = sumLong / Double(longs.count)
         let avgLat: Double = sumLat / Double(lats.count)
-        let centerLocation = CLLocationCoordinate2D(latitude: avgLat + 0.07, longitude: avgLong)
+        let centerLocation = CLLocationCoordinate2D(latitude: avgLat + 0.06, longitude: avgLong + 0.01)
         let span = MKCoordinateSpan(latitudeDelta: 0.27, longitudeDelta: 0.27)
         let region = MKCoordinateRegion(center: centerLocation, span: span)
         mapView.setRegion(region, animated: true)

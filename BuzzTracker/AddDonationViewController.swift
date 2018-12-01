@@ -23,6 +23,19 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
         return categories[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = view as? UILabel
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            let font = UIFont(name: "Avenir", size: 16)
+            pickerLabel?.font = font
+            pickerLabel?.textAlignment = .center
+        }
+        pickerLabel?.text = categories[row]
+        pickerLabel?.textColor = UIColor.black
+        return pickerLabel!
+    }
+    
 
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
@@ -31,6 +44,8 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var shortDescriptionTextField: UITextField!
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet weak var addDonationButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var categories: [String] = []
     var currLocation: Location? = nil
@@ -39,6 +54,9 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addDonationButton.layer.cornerRadius = 9
+        cancelButton.layer.cornerRadius = 5
+        
         self.setupKeyboardStuff()
         for type in DonationCategory.allCases {
             categories.append(type.rawValue)
@@ -80,7 +98,7 @@ class AddDonationViewController: UIViewController, UIPickerViewDelegate, UIPicke
             case SHORTEMPTY = "Short description field is empty"
             case NUMEMPTY = "Number field is empty"
             case VALEMPTY = "Value field is empty"
-            case NUMINVALID = "Number field must contain a valid integer"
+            case NUMINVALID = "Quantity field must contain a valid integer"
             case VALINVALID = "Value field must contain a valid number"
         }
         

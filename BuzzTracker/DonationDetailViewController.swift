@@ -22,6 +22,7 @@ class DonationDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.barButtonFormat()
         
         emailLabel.text = Auth.auth().currentUser!.email
         
@@ -38,12 +39,12 @@ class DonationDetailViewController: UIViewController {
             }
         })
         
-        detailLabels[0].text = "Category: \(currDonation!.category)"
-        detailLabels[1].text = "Full Description: \(currDonation!.fullDescripton)"
-        detailLabels[2].text = "Location: \(currLocation!.name)"
-        detailLabels[3].text = "Quantity: \(currDonation!.number)"
-        detailLabels[4].text = "Short Description: \(currDonation!.shortDescription)"
-        detailLabels[6].text = "Value: \(currDonation!.value)"
+        detailLabels[0].text = "CATEGORY: \(currDonation!.category)"
+        detailLabels[1].text = "FULL DESCRIPTION: \(currDonation!.fullDescripton)"
+        detailLabels[2].text = "LOCATION: \(currLocation!.name)"
+        detailLabels[3].text = "QUANTITY: \(currDonation!.number)"
+        detailLabels[4].text = "SHORT DESCRIPTION: \(currDonation!.shortDescription)"
+        detailLabels[6].text = "VALUE: \(currDonation!.value)"
         
         let timeStamp: TimeStamp = currDonation!.timestamp
         
@@ -65,7 +66,7 @@ class DonationDetailViewController: UIViewController {
             secondString = "0\(secondString)"
         }
         
-        let timeMessage: String = "Time Stamp: \(timeStamp.month)-\(timeStamp.date)-\(yearSubstr) \(hourString):\(minuteString):\(secondString)"
+        let timeMessage: String = "TIME STAMP: \(timeStamp.month)-\(timeStamp.date)-\(yearSubstr) \(hourString):\(minuteString):\(secondString)"
         detailLabels[5].text = timeMessage
     }
     

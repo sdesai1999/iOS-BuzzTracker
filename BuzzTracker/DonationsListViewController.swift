@@ -28,6 +28,11 @@ class DonationsListViewController: UIViewController, UITableViewDelegate, UITabl
         self.performSegue(withIdentifier: "tappedOnDonationCell", sender: self)
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(red: 1.00032, green: 0.998127, blue: 0.923862, alpha: 1)
+        cell.textLabel?.font = UIFont(name: "Avenir", size: 16)
+    }
+    
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
     @IBOutlet weak var donationTableView: UITableView!
@@ -38,6 +43,8 @@ class DonationsListViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.barButtonFormat()
+        self.donationTableView.separatorStyle = .none
         
         emailLabel.text = Auth.auth().currentUser!.email
         
