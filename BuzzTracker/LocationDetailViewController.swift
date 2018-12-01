@@ -16,12 +16,16 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var userTypeLabel: UILabel!
     @IBOutlet var detailLabels: [UILabel]!
     @IBOutlet weak var addDonationButton: UIButton!
+    @IBOutlet weak var viewDonationsButton: UIButton!
     
     
     var currLocation: Location? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.barButtonFormat()
+        addDonationButton.layer.cornerRadius = 9
+        viewDonationsButton.layer.cornerRadius = 9
         
         if currUserType != UserType.locationEmployee {
             addDonationButton.isHidden = true
@@ -42,12 +46,12 @@ class LocationDetailViewController: UIViewController {
             }
         })
         
-        detailLabels[0].text = "Name: \(currLocation!.name)"
-        detailLabels[1].text = "Type: \(currLocation!.type)"
-        detailLabels[2].text = "Longitude: \(currLocation!.longitude)"
-        detailLabels[3].text = "Latitude: \(currLocation!.latitude)"
-        detailLabels[4].text = "Address: \(currLocation!.address)"
-        detailLabels[5].text = "Phone Number: \(currLocation!.phoneNum)"
+        detailLabels[0].text = "NAME: \(currLocation!.name)"
+        detailLabels[1].text = "TYPE: \(currLocation!.type)"
+        detailLabels[2].text = "LONGITUDE: \(currLocation!.longitude)"
+        detailLabels[3].text = "LATITUDE: \(currLocation!.latitude)"
+        detailLabels[4].text = "ADDRESS: \(currLocation!.address)"
+        detailLabels[5].text = "PHONE NUMBER: \(currLocation!.phoneNum)"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

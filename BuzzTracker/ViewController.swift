@@ -13,8 +13,14 @@ var currUserType: UserType = UserType.user // default value, can change later
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInButton.layer.cornerRadius = 9
+        registerButton.layer.cornerRadius = 9
+        print(self.view.backgroundColor)
     }
 }
 

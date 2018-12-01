@@ -27,6 +27,11 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
         self.performSegue(withIdentifier: "tappedOnCell", sender: self)
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(red: 1.00032, green: 0.998127, blue: 0.923862, alpha: 1)
+        cell.textLabel?.font = UIFont(name: "Avenir", size: 16)
+    }
+    
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
     @IBOutlet weak var locationsTableView: UITableView!
@@ -36,7 +41,8 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.barButtonFormat()
+        
         emailLabel.text = Auth.auth().currentUser!.email
 
         let ref1 = Database.database().reference()
@@ -80,5 +86,12 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
         if let destination = segue.destination as? MapViewController {
             destination.locationList = self.locationList
         }
+    }
+}
+
+extension UIViewController {
+    func barButtonFormat() {
+        let font: UIFont = UIFont(name: "Avenir", size: 17)!
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.classForCoder() as! UIAppearanceContainer.Type]).setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
     }
 }

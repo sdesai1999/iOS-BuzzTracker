@@ -17,12 +17,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var userTypeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var activeTextField = UITextField()
     var currKeyboardHeight: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerButton.layer.cornerRadius = 9
+        cancelButton.layer.cornerRadius = 6
         
         self.setupKeyboardStuff()
         

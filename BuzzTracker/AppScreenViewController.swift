@@ -15,9 +15,14 @@ class AppScreenViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var userTypeLabel: UILabel!
     @IBOutlet weak var signOutButton: UIButton!
+    @IBOutlet var actionButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for button in actionButtons {
+            button.layer.cornerRadius = 9
+        }
+        
         emailLabel.text = Auth.auth().currentUser!.email
         
         let ref = Database.database().reference()

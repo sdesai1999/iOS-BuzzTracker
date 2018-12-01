@@ -14,12 +14,16 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var activeTextField = UITextField()
     var currKeyboardHeight: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInButton.layer.cornerRadius = 9
+        cancelButton.layer.cornerRadius = 6
         
         self.setupKeyboardStuff()
         
